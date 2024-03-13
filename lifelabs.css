@@ -1,0 +1,57 @@
+.season_tabs {
+    position: relative;   
+   height: 100vh;
+    clear: both;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .season_tab { 
+    clear:both;
+    max-width: 300px;
+  }
+  .season_tab label {
+      flex: 1 1 0;
+      background: #e5e0ff;
+      padding: 10px;
+      font-size: 21px;
+      vertical-align:middle;
+      position:relative;
+      right: 1px;
+      left: 1px;
+      width: 264px;
+      height: 10vh;
+      display: table-cell;
+  }
+  .season_tab [type=radio] {
+    display:none;   
+  }
+  .season_content {
+    flex: 1 1 0;
+    height: 400vh;
+    position:absolute;
+    top: 0;
+    left: 286px;
+    background: #fff2f2;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 2px solid #fff2f2;
+   }
+  .season_content span {
+    animation: 0.5s ease-out 0s 1 slideInFromTop; 
+  }
+  [type=radio]:checked ~ label {
+    background: #8ea7e9;
+    border-bottom: 2px solid #8ea7e9;
+    z-index:2;
+  }
+  [type=radio]:checked ~ label ~ .season_content {
+    z-index:1;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
